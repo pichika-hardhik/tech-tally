@@ -1,95 +1,26 @@
 @import "tailwindcss";
 
-/* Fonts (kept from the original Next.js template) */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
 @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* Colours */
-@theme {
-  /* base colours: bg-primary, text-accent, etc. */
-  --color-text: #eef1f2;
-  --color-background: #0e1418;
-  --color-primary: #99bfd5;
-  --color-secondary: #256183;
-  --color-accent: #48a9df;
-
-  /* text */
-  --color-text-50: #f1f3f4;
-  --color-text-100: #e2e7e9;
-  --color-text-200: #c5cfd3;
-  --color-text-300: #a9b7bc;
-  --color-text-400: #8ca0a6;
-  --color-text-500: #6f8890;
-  --color-text-600: #596d73;
-  --color-text-700: #435156;
-  --color-text-800: #2c363a;
-  --color-text-900: #161b1d;
-  --color-text-950: #0b0e0e;
-
-  /* background */
-  --color-background-50: #eff3f6;
-  --color-background-100: #dfe7ec;
-  --color-background-200: #bfcfd9;
-  --color-background-300: #9fb6c6;
-  --color-background-400: #7e9eb4;
-  --color-background-500: #5e86a1;
-  --color-background-600: #4b6b81;
-  --color-background-700: #395060;
-  --color-background-800: #263640;
-  --color-background-900: #131b20;
-  --color-background-950: #090d10;
-
-  /* primary */
-  --color-primary-50: #edf4f8;
-  --color-primary-100: #dbe8f0;
-  --color-primary-200: #b7d2e1;
-  --color-primary-300: #92bbd3;
-  --color-primary-400: #6ea4c4;
-  --color-primary-500: #4a8eb5;
-  --color-primary-600: #3b7191;
-  --color-primary-700: #2c556d;
-  --color-primary-800: #1e3948;
-  --color-primary-900: #0f1c24;
-  --color-primary-950: #070e12;
-
-  /* secondary */
-  --color-secondary-50: #ebf4f9;
-  --color-secondary-100: #d7e9f4;
-  --color-secondary-200: #afd4e9;
-  --color-secondary-300: #88bedd;
-  --color-secondary-400: #60a8d2;
-  --color-secondary-500: #3893c7;
-  --color-secondary-600: #2d759f;
-  --color-secondary-700: #225877;
-  --color-secondary-800: #163b50;
-  --color-secondary-900: #0b1d28;
-  --color-secondary-950: #060f14;
-
-  /* accent */
-  --color-accent-50: #e9f5fb;
-  --color-accent-100: #d4ebf7;
-  --color-accent-200: #a8d7f0;
-  --color-accent-300: #7dc3e8;
-  --color-accent-400: #52aee0;
-  --color-accent-500: #269ad9;
-  --color-accent-600: #1f7bad;
-  --color-accent-700: #175d82;
-  --color-accent-800: #0f3e57;
-  --color-accent-900: #081f2b;
-  --color-accent-950: #040f16;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
-/* Default styles */
-@layer base {
-  html {
-    color-scheme: dark;
-  }
-
-  body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
